@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rye&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <title>Homework_9</title>
+</head>
+
+<body>
+    <style>
+        * {
+            font-family: "Arial", "Rye", serif;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(45deg, rgb(118, 201, 255), rgb(247, 255, 222));
+            overflow-x: hidden;
+            font-size: 16px;
+        }
+
+        a {
+            text-decoration: none;
+            color: aliceblue;
+            cursor: pointer;
+        }
+
+        .information {
+            max-width: 400px;
+            min-height: 400px;
+            margin: 0 auto;
+            background-color: aliceblue;
+            border-radius: 10px;
+            box-shadow: 0 0 10px #000;
+            max-height: auto;
+        }
+
+        h1 {
+            padding-top: 30px;
+            text-align: center;
+        }
+
+        form {
+            padding: 30px;
+        }
+
+        .fat label,
+        .prod label,
+        .gender,
+        .brand {
+            font-size: 20px;
+            font-weight: 600;
+            margin-left: 10px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+
+        #power,
+        #marke {
+            margin-left: 10px;
+        }
+
+        input:not([type="radio"]),
+        option,
+        select {
+            width: 36ch;
+            height: 30px;
+            margin: 10px 10px 10px 10px;
+            border: 2px solid #07527e;
+            border-radius: 3px;
+            box-shadow: 0 0 3px #07527e;
+        }
+
+        input[type="radio"] {
+            margin: 10px 10px 10px 10px;
+        }
+
+
+        #but {
+            display: block;
+            width: 270px;
+            height: 30px;
+            background: #07527e;
+            color: aliceblue;
+            padding: 3px;
+            text-align: center;
+            margin: 10px 15px 10px 15px;
+            border: 2px solid #07527e;
+            border-radius: 2px;
+            box-shadow: 0 0 3px #03334f;
+            font-weight: 600;
+            transition: transform 0.2s, color 0.2s;
+        }
+
+        #but:hover {
+            transform: scale(1.1);
+            background: #057cc1;
+        }
+
+        @media(max-width: 450px) {
+            .information {
+                width: 90vw;
+            }
+
+            input:not([type="radio"]),
+            option,
+            select {
+                width: 25ch;
+                height: 25px;
+                margin: 5px 5px 5px 5px;
+            }
+            #but {
+            width: 25ch;
+            height: 25px;
+            margin: 5px 10px 5px 10px;
+        }
+
+        }
+    </style>
+    <main>
+        <section id="top">
+            <div class="information">
+                <h1>Product</h1>
+                <form>
+                    <div class="prod"><label for="product">Select product type</label></div>
+                    <select type="text" id="product" name="products">
+                        <option value="phone">Phone</option>
+                        <option value="laptop">Laptop</option>
+                        <option value="tv">TV</option>
+                        <option value="tablet">Tablet</option>
+                    </select>
+                    <div><span class="gender">Select power</span>
+                        <div></div>
+                        <label for="15w" id="power">15W</label>
+                        <input type="radio" id="15w" name="gend">
+                        <label for="25W">25W</label>
+                        <input type="radio" id="25w" name="gend">
+                        <label for="65w">65W</label>
+                        <input type="radio" id="65w" name="gend">
+                        <label for="100w">100W</label>
+                        <input type="radio" id="100w" name="gend">
+                    </div>
+                    <div><span class="brand">Select a brand</span>
+                        <div></div>
+                        <label for="asus" id="marke">Asus</label>
+                        <input type="radio" id="asus" name="brands">
+                        <label for="samsung">Samsung</label>
+                        <input type="radio" id="apple" name="brands">
+                        <label for="other">Other</label>
+                        <input type="radio" id="other" name="brands">
+                    </div>
+                    <div class="fat"><label for="sorting">Sorting</label></div>
+                    <select type="text" id="sorting" name="sortings">
+                        <option value="rating">by rating</option>
+                        <option value="cheap">from cheap to expensive</option>
+                        <option value="expensive">from expensive to cheap</option>
+                        <option value="news">news</option>
+                    </select>
+
+                    <div class="fat"><label for="name">Model name</label></div>
+                    <input type="text" id="name" placeholder="Enter your model">
+                    <div></div>
+                    <button type="submit" id="but">Send</button>
+                </form>
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>

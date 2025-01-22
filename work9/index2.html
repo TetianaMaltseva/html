@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rye&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <title>Homework_9</title>
+</head>
+
+<body>
+  <style>
+    * {
+      font-family: "Arial", "Rye", serif;
+    }
+
+    body {
+      background: linear-gradient(45deg, rgb(118, 201, 255), rgb(247, 255, 222));
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+      font-size: 16px;
+    }
+
+    header {
+      width: 100%;
+      height: 80px;
+      background: navy;
+      font-size: 20px;
+      font-weight: 400;
+      font-style: normal;
+      position: fixed;
+    }
+
+    ul {
+      display: flex;
+      justify-content: center;
+      list-style: none;
+    }
+
+    li {
+      margin-left: 15px;
+    }
+
+    a {
+      text-decoration: none;
+      color: aliceblue;
+      cursor: pointer;
+    }
+
+    a:hover {
+      color: lightblue;
+    }
+    /*Скрыли по умолчанию бургер*/
+		.burger-menu {
+			display: none;
+		}
+		@media(max-width: 768px){
+			.main-menu ul{
+				display: none;
+			}
+			.burger-menu{
+				display: block;
+			}
+      }
+      @media(max-width: 450px) {
+            .information {
+                width: 90vw;
+            }
+
+            input:not([type="radio"]),
+            option,
+            select {
+                width: 25ch;
+                height: 25px;
+                margin: 5px 5px 5px 5px;
+            }
+            #but {
+            width: 25ch;
+            height: 25px;
+            margin: 5px 10px 5px 10px;
+        }
+        }
+      @media(max-width: 321px){
+			.social-icons{
+				flex-wrap: wrap;
+			}
+		}
+
+		/* Иконка меню (три линии) */
+		.menu-icon {
+			margin: 25px 0 0 15px;
+			width: 30px;
+			height: 20px;
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+			cursor: pointer;
+		}
+
+		.menu-icon span {
+			display: block;
+			height: 3px;
+			background-color: aliceblue;
+			border-radius: 2px;
+			transition: transform 0.3s ease, opacity 0.3s ease;
+		}
+
+		/* Скрытые ссылки */
+		.menu-links {
+			display: none;
+			/* Скрываем меню по умолчанию */
+			flex-direction: column;
+			gap: 10px;
+			position: absolute;
+			top: 55px;
+			left: 0;
+			background-color: lavender;
+			border: 1px solid rgb(195, 195, 237);
+			padding: 10px;
+			border-radius: 5px;
+			box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+		}
+
+		/* Ссылки внутри меню */
+		.menu-links a {
+			text-decoration: none;
+			color: black;
+			font-size: 16px;
+			padding: 5px 10px;
+			transition: background-color 0.2s;
+		}
+
+		.menu-links a:hover {
+			background-color: rgb(186, 186, 242);
+			border-radius: 3px;
+		}
+
+		/* Активное состояние меню */
+		.menu-links.active {
+			display: flex;
+		}
+
+		/* Анимация для "креста" при открытии меню */
+		.menu-icon.active span:nth-child(1) {
+			transform: translateY(8px) rotate(45deg);
+		}
+
+		.menu-icon.active span:nth-child(2) {
+			opacity: 0;
+		}
+
+		.menu-icon.active span:nth-child(3) {
+			transform: translateY(-8px) rotate(-45deg);
+		}
+
+    #top {
+      padding-top: 100px;
+      min-height: 350px;
+    }
+    iframe{
+      width: 100%;
+      min-height: 500px ;
+    }
+    footer {
+      background: navy;
+      color: aliceblue;
+      height: 80px;
+    }
+
+    .social-icons {
+      display: flex;
+      justify-content: center;
+      padding-top: 20px;
+    }
+
+    .icon {
+      font-size: 15px;
+      text-decoration: none;
+      transition: transform 0.2s, color 0.2s;
+      margin-left: 15px;
+    }
+
+    .icon:hover {
+      color: #07527e;
+      transform: scale(1.2);
+    }
+  </style>
+  <header>
+    <nav class="main-menu">
+      <ul>
+        <li><a href="./index1.html">Home</a></li>
+        <li><a href="./index2.html">Form-Filter</a></li>
+        <li><a href="./index3.html">Form</a></li>
+
+      </ul>
+    </nav>
+    <div class="burger-menu">
+			<div class="menu-icon" onclick="toggleMenu()">
+				<span></span>
+				<span></span>
+				<span></span>
+			</div>
+			<nav class="menu-links">
+				<a href="./index1.html">Home</a>
+				<a href="./index2.html">Form-Filter</a>
+				<a href="./index3.html">form</a>
+			</nav>
+		</div>
+  </header>
+
+    <section id="top">
+        <iframe src="./index4.html" frameborder="0"></iframe>
+   </section>
+
+  <footer>
+    <div class="social-icons">
+      <a href="https://www.facebook.com/yourprofile" target="_blank" class="icon">
+        <i class="fab fa-facebook"></i> Facebook
+      </a>
+      <a href="https://github.com/yourprofile" target="_blank" class="icon">
+        <i class="fab fa-github"></i> Github
+      </a>
+      <a href="mailto:maltsevamaitsev@gmail.com" class="icon">
+        <i class="fas fa-envelope"></i> E-Mail
+      </a>
+      <a href="tel:+491746829685" class="icon">
+        <i class="fas fa-phone"></i> Call me
+      </a>
+
+    </div>
+  </footer>
+  <script>
+    function toggleMenu() {
+    const menuIcon = document.querySelector(".menu-icon");
+    const menuLinks = document.querySelector(".menu-links");
+  
+    menuIcon.classList.toggle("active");
+    menuLinks.classList.toggle("active");
+  }
+    </script>
+</body>
+
+</html>
