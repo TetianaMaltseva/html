@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rye&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <title>Homework_2</title>
+</head>
+<body>
+    <style>
+        body{
+            background: lavender;
+            margin: 0;
+            padding: 0;
+            font-family: "Arial", "Rye", serif;
+            font-size: 16px;
+        }
+        .block1{
+            height: 50vh;
+            background: pink;
+            text-align: center; 
+        
+            place-items: center;
+        }
+        .k1{
+            background: white;
+            display: grid;
+            place-items: center;
+            width: 80%;
+            height: 60%;
+            margin-top: 40px;
+           
+        }
+        .k2{
+            background: black;
+            width: 80%;
+            height: 60%;
+        }
+        
+        .block2{
+        display: grid; 
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 30px 100px 30px;
+        grid-template-areas: 'head head head head'
+                             'p1 p2 p3 p4' 
+                             'footer footer footer footer';
+        }
+        .header{
+            background: gray;
+            grid-area: head;
+            text-align: center;
+        }
+        .p1{
+            background: red;
+            grid-area: p1;
+        }
+        .p2{
+            background: orange;
+            grid-area: p2;
+        }
+        .p3{
+            background: lightblue;
+            grid-area: p3;
+        }
+        .p4{
+            background: yellow;
+            grid-area: p4;
+        }
+        .footer{
+            background: gray;
+            grid-area: footer;
+        }
+        .block3{
+        background: green;
+        display: grid; 
+        grid-template-columns: 1fr 1fr 1fr ;
+        grid-template-rows: 460px;
+        grid-template-areas: 
+                             's1 s2 s3'                      
+        }
+        .s1{
+            grid-area: s1;
+            text-align: center;
+           
+        }
+        .left{
+            margin-top: 50px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 40px 350px;
+            justify-self: center;
+            grid-template-areas: 
+                             'ss1 ss1'
+                             'ss2 ss3';
+            width: 70%;
+        }
+        .ss1{
+            grid-area: ss1;
+            background: orange;
+        }
+        .ss2{
+            grid-area: ss2;
+            background: pink;
+        }
+        .ss3{
+            grid-area: ss3;
+            background: yellow;
+        }
+        .s2{
+            background: lightskyblue;
+            grid-area: s2;
+            text-align: center;
+        }
+        .centre{
+            margin-top: 50px;
+            width: 100%;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 390px;
+            justify-self: flex-end;
+            grid-template-areas: 
+                             'centre1 centre2 centre3';
+        }
+        .centre1{
+            background: red;
+            grid-area: centre1;
+        }
+        .centre2{
+            background: yellow;
+            grid-area: centre2;
+        }
+        .centre3{
+            background: orange;
+            grid-area: centre3;
+        }
+        .a{
+            margin-top: 30px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 240px  100px;
+            width: 100%;
+        }
+        .a1{
+            background: red;
+            grid-column-start: 2;
+            grid-column-end: 3;
+            grid-row-start: 2;
+            grid-row-end: 3;
+        }
+        .a2{
+            background: orange;
+            grid-column-start: 1;
+            grid-column-end: 2;
+            grid-row-start: 1;
+            grid-row-end: 3;
+        }
+        .s3{
+            background: blue;
+            grid-area: s3;
+            text-align: center;
+        }
+        .right{
+            margin-top: 120px;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 100px  100px 90px 30px;
+            width: 100%;
+        }
+        .right1{
+            background: lightblue;
+            grid-column-start: 1;
+            grid-column-end: 2;
+            grid-row-start: 3;
+            grid-row-end: 5;
+        }
+        .right2{
+            background: yellow;
+            grid-column-start: 2;
+            grid-column-end: 3;
+            grid-row-start: 2;
+            grid-row-end: 4;
+        }
+        .right3{
+            background: orange;
+            grid-column-start: 3;
+            grid-column-end: 4;
+            grid-row-start: 1;
+            grid-row-end: 3;
+        }
+        .last{
+            margin-top: 50px;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 30px  30px 30px ;
+            width: 100%;
+        }
+        .last1{
+            background: black;
+            color: white;
+            grid-column-start: 2;
+            grid-column-end: 4;
+            grid-row-start: 1;
+            grid-row-end: 2;
+        }
+        .last2{
+            background: black;
+            color: white;
+            grid-column-start: 1;
+            grid-column-end: 3;
+            grid-row-start: 3;
+            grid-row-end: 4;
+        }
+       
+    </style>
+    <section class="block1">Header
+        <div class="k1">
+            <div class="k2"></div>
+        </div>
+     </section>
+    <section class="block2">
+        <div class="header">Menu</div>
+        <div class="p1"></div>
+        <div class="p2"></div>
+        <div class="p3"></div>
+        <div class="p4"></div>
+        <div class="footer"></div>
+     </section>
+     <section class="block3">
+        <div class="s1">Left block
+            <div class="left">
+                <div class="ss1">left</div>
+                <div class="ss2">a-left</div>
+                <div class="ss3">b-left</div>
+            </div>
+        </div>
+        <div class="s2">Centre block
+            <div class="centre">
+                <div class="centre1"></div>
+                <div class="centre2">a-centre
+                    <div class="a">
+                        <div class="a1">B-c</div>
+                        <div class="a2">A-c</div>
+                    </div>
+                </div>
+                <div class="centre3"></div>
+            </div>
+        </div>
+        <div class="s3">Right block
+            <div class="right">
+                <div class="right1"></div>
+                <div class="right2"></div>
+                <div class="right3">
+                    <div class="last">
+                        <div class="last1">text</div>
+                        <div class="last2">text</div>
+                       
+                    </div>
+                </div>
+            </div>
+        </div>
+     </section>
+</body>
+</html>
