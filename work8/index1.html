@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rye&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <title>Homework_5</title>
+</head>
+<body>
+    <style>
+        *{
+            font-family: "Arial", "Rye", serif;
+        }
+        body{
+            margin: 0;
+            padding: 0;
+            background: lavender;
+            overflow-x: hidden;
+            font-size: 16px;
+        }
+        header{
+            width: 100%;
+            height: 80px;
+            background: navy;
+            font-size: 20px;
+            font-weight: 400;
+            font-style: normal;
+            position: fixed;
+            z-index: 1000;
+        }
+        table{
+            margin: auto;
+            border-collapse: collapse;
+        }
+        ul{
+            display: flex;
+            justify-content: center;
+            list-style: none;
+        }
+        li{
+            margin-left: 15px;
+        }
+        a{
+            text-decoration: none;
+            color:aliceblue;
+            cursor: pointer;
+        }
+        a:hover{
+            color: lightblue;
+        }
+        #top{
+            padding-top: 100px;
+        }
+        .befor::before{
+            content:"";
+           display: inline-block;
+            width: 100px;
+            height: 100px;
+            background-image: url(rammstein.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            filter: grayscale(1);
+            margin-right: 40px;
+            margin-left: 40px;
+        }
+        .befor::after{
+            content:"";
+           display: inline-block;
+            width: 100px;
+            height: 100px;
+            background-image: url(skryabin.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            filter: blur(1px);
+        }
+        .mog::before{
+            content:"";
+           display: inline-block;
+            width: 100px;
+            height: 100px;
+            background-image: url(rammstein.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            filter: sepia(0%);
+            margin-right: 40px;
+        }
+        .foto::after{
+            content:"";
+           display: inline-block;
+            width: 100px;
+            height: 100px;
+            background-image: url(mogilevskaya.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            filter: contrast(2);
+            margin-right: 40px;
+        }
+        .foto::before{
+            content:"";
+           display: inline-block;
+            width: 100px;
+            height: 100px;
+            background-image: url(mogilevskaya.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            filter: drop-shadow(10px 10px gray);
+            margin-right: 40px;
+        }
+        h2{
+            text-align: center;
+            padding-bottom: 20px;
+        }
+        #singer{
+            display: flex;
+            justify-content: space-between;
+            padding: 0;
+           margin: 0;
+        }
+        #singer li{
+            flex: 1;
+            margin: 0 10px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 0 4px 6px rgba(0,0, 0, 0.1);
+        }
+       .position{
+        position: absolute;
+        top: 265px;
+        z-index: 500;
+       }
+        .gruppe{
+            color:blue;
+            font-size: 25px;
+            
+        }
+        .fio{
+            font-size: 20px;
+            color:violet;
+           
+        }
+        .name{
+            font-size: 15px;
+            color: black;
+           
+        }
+        footer{
+            background: navy;
+            color: aliceblue;
+            height: 80px;
+        }
+        .social-icons{
+            display: flex;
+            justify-content: center;
+            padding-top: 20px;
+        }
+        .icon {
+        font-size: 15px;
+        text-decoration: none;
+        transition: transform 0.2s, color 0.2s;
+        margin-left: 15px;
+        }
+        .icon:hover{
+        color: #07527e;
+        transform: scale(1.2);
+ }
+    </style>
+    <header>
+        <table>
+            <td>
+                <nav>
+                    <ul>
+                        <li><a href="./index1.html">Home</a></li>
+                        <li><a href="./index2.html">Visual</a></li>
+                        <li><a href="./index3.html">Float</a></li>
+                        <li><a href="./index4.html">Bloks</a></li>
+                    </ul>
+                </nav>
+            </td>
+        </table>
+      
+    </header>
+    <main>
+        <section id="top">
+            <div class="befor"><span class="foto"><span class="mog"></span><span></span></span></div>
+            <h2>Cписок улюблених музикантів</h2>
+                <ul id="singer">
+                    <li class="gruppe"><span class="position">Rammstein</span> 
+                        <ul>
+                            <li class="fio">Biographie
+                                <ul><li class="name">Rammstein ist eine deutsche Band, die musikalisch zur Neuen
+                                 Deutschen Härte gezählt wird und 1994 in Berlin gegründet wurde. Ihr Kennzeichen 
+                                 ist ein als „brachial“ beschriebener Musikstil, den die Bandmitglieder zu Beginn ihrer 
+                                 Karriere selbst als „Tanzmetall“ bezeichneten. Rammstein ist international für den intensiven
+                                  Einsatz von pyrotechnischen Elementen während ihrer Live-Shows bekannt.
+                                Im Zusammenhang mit stark polarisierenden Musikvideos, Liedtexten und Albumcovern
+                                 zählt Rammstein in der heimischen öffentlichen Wahrnehmung zu den kontrovers besprochenen
+                                  Bands.
+                                Rammstein verkaufte über 20 Millionen Tonträger. In der internationalen
+                                 Wahrnehmung zählt Rammstein zu den größten „Kulturexporten“ Deutschlands.
+                                </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="gruppe"><span class="position">Кузьма Скрябін</span>
+                        <ul>
+                            <li class="fio">Біографія
+                                <ul >
+                                    <li class="name" >Народився 17 серпня 1968 року в Самборі на Львівщині. 
+                                    Пізніше його родина переїхала в м. Новояворівськ, де він і почав свій творчий шлях. 
+                                    Також Кузьма вчився в 4 школі у місті Новий Розділ, де з'явилася його мрія стати водієм сміттєвоза.
+                                     Мати була вчителькою музики. Андрій закінчив музичну школу за класом фортепіано.
+                                      Закінчив факультет стоматології Львівського медінституту (тепер Львівський національний медичний 
+                                      університет імені Данила Галицького). Йому було нецікаве навчання там, однак довчився на прохання
+                                       батьків. Займався спортом, кандидат у майстри спорту з біатлону.
+                                    14 вересня 1997 року дружина Світлана народила доньку, яку назвали 
+                                    Марією-Барбарою — на честь польської акторки Барбари Брильської,
+                                     кумира дитинства Андрія Кузьменка (за його словами, дружина також дуже 
+                                     подібна на Барбару Брильську).
+                                    Розмовляв українською мовою, також знав англійську, польську та російську мови.
+                                   </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="gruppe"><span class="position">Могилевська</span>
+                        <ul >
+                            <li class="fio">Біографія
+                             <ul>
+                                <li class="name">
+                                    Ната́лія Олексі́ївна Могиле́вська — українська акторка, телеведуча, співачка, продюсерка.
+                                    Народна артистка України (2004).
+                                    Народилася 2 серпня 1975 у Києві, навчалась у школі № 195 імені В. І. Кудряшова
+                                    на Березняках, де закінчила 9 класів. У 1995 році після закінчення Київського естрадно-циркового
+                                    училища протягом тривалого часу була акторкою, працювала в Театрі естради,
+                                    єврейському театрі «Штерн».
+                                </li>
+                                </ul>
+                            </li>
+                        </ul>  
+                    </li>
+                </ul>
+        </section>
+      
+    <footer>
+        <div class="social-icons">
+            <a href="https://www.facebook.com/yourprofile" target="_blank" class="icon">
+              <i class="fab fa-facebook"></i> Facebook
+            </a>
+            <a href="https://github.com/yourprofile" target="_blank" class="icon">
+              <i class="fab fa-github"></i> Github
+            </a>
+            <a href="mailto:maltsevamaitsev@gmail.com" class="icon">
+              <i class="fas fa-envelope"></i> E-Mail
+            </a>
+            <a href="tel:+491746829685" class="icon">
+              <i class="fas fa-phone"></i> Call me
+            </a>
+            
+          </div>
+    </footer>
+    </main>
+</body>
+</html>
