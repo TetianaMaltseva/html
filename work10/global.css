@@ -1,9 +1,44 @@
+
+
 .f-size-w{
     font-size: 13px;
     font-weight: 400;
     color: white;
 }
-
-bg-viol{
+.f-size-b{
+    font-size: 24px;
+    font-weight: 400;
+    color: white;
+}
+.bg-viol{
     background: rgb(80,49 ,169 );
 }
+.text-button{
+    display: inline-block;
+    border: 1px solid;
+    border-radius: 30px;
+    color: rgb(255, 255, 255);
+    font-size: 14px;
+    margin-top: 50px;
+    padding: 10px 50px;
+    transition: all 0.35s ease 0s;
+}
+
+/* .folio-outer{
+    float: left;
+    position: relative;
+    overflow: hidden;
+}*/
+/* .folio-hover{
+    background: rgb(255, 0, 0);
+    height: 100%;
+    opacity: 0;
+    padding-top: 100px;
+    position: absolute;
+    text-align: center;
+    top: 0;
+    transform: translateY(300px);
+    transition: all .5s ease 0s;
+    width: 100%;
+}  */
+
